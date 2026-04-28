@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background: #ff7e5f;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #feb47b;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 10px;
+}
+
+img {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.repo {
+  background: rgba(255,255,255,0.1);
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+  border-radius: 8px;
+}
