@@ -1,61 +1,153 @@
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
-  color: white;
-  text-align: center;
+/* Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Container */
 .container {
-  margin-top: 50px;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
 }
 
+/* Heading */
 h1 {
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 
+/* Search box */
 .search-box {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 input {
-  padding: 10px;
-  width: 250px;
-  border-radius: 5px;
+  padding: 12px;
+  width: 60%;
+  border-radius: 8px;
   border: none;
+  outline: none;
+  font-size: 1rem;
 }
 
 button {
-  padding: 10px 15px;
+  padding: 12px 18px;
   border: none;
   background: #ff7e5f;
   color: white;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s;
 }
 
 button:hover {
   background: #feb47b;
 }
 
+/* Card (profile) */
 .card {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   padding: 20px;
   margin: 20px auto;
-  width: 300px;
-  border-radius: 10px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-img {
-  border-radius: 50%;
+.card img {
   width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+/* Repo section */
+#repos {
+  margin-top: 20px;
 }
 
 .repo {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
   margin: 10px auto;
-  padding: 10px;
-  width: 300px;
-  border-radius: 8px;
+  border-radius: 10px;
+  max-width: 350px;
+  transition: 0.3s;
+}
+
+.repo:hover {
+  transform: translateY(-5px);
+}
+
+.repo a {
+  color: #ffd369;
+  text-decoration: none;
+}
+
+.repo a:hover {
+  text-decoration: underline;
+}
+
+/* Loader */
+.loader {
+  border: 5px solid #ccc;
+  border-top: 5px solid #ff7e5f;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Light Mode */
+.light {
+  background: #f4f4f4;
+  color: #000;
+}
+
+.light .card,
+.light .repo {
+  background: #fff;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  input {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin-left: 0;
+    width: 50%;
+  }
 }
